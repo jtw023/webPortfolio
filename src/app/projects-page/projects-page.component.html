@@ -1,0 +1,486 @@
+<section id="projects">
+    <div class="ui grid">
+        <div class="four wide colum">
+            <div (click)='onClick($event.target)' class="ui vertical fluid tabular menu">
+                <!--!Tab Names-->
+                <a class="item active">Angular Projects (5)</a>
+                <a class="item">NodeJS Projects (5)</a>
+                <a class="item">Vanilla JavaScript Projects (8)</a>
+            </div>
+        </div>
+        <div class="twelve wide stretched colum">
+          <!--!angular projects tab-->
+            <div *ngIf="makeInactive.innerText === 'Angular Projects (5)'" class="ui segment">
+                <div>
+                  <img (click)='passwordModal()' src="../../assets/images/password.png" alt="">
+                  <img (click)='mathModal()' src="../../assets/images/mathgame.png" alt="">
+                  <img (click)='covidModal()' src="../../assets/images/covid.png" alt="">
+                  <img (click)='emailModal()' src="../../assets/images/email.png" alt="">
+                </div>
+                <div>
+                  <img (click)='wikiModal()' src="../../assets/images/wikipediaAPI.png" alt="">
+                </div>
+            </div>
+            <!--!nodejs projects tab-->
+            <div *ngIf="makeInactive.innerText === 'NodeJS Projects (5)'" class="ui segment">
+                <div>
+                    <img (click)='notesModal()' src="../../assets/images/noteapp.png" alt="">
+                    <img (click)='chatModal()' src="../../assets/images/chatapp.png" alt="">
+                    <img (click)='nodeJSWeatherModal()' src="../../assets/images/nodejsWeatherApp.png" alt="">
+                    <img (click)='ecomModal()' src="../../assets/images/ecommapp.png" alt="">
+                </div>
+                <div>
+                  <img (click)='movieModal()' src="../../assets/images/movieFight.png" alt="">
+                </div>
+            </div>
+            <!--!vanilla javascript tab-->
+            <div *ngIf="makeInactive.innerText === 'Vanilla JavaScript Projects (8)'" class="ui segment">
+                <div>
+                    <img (click)='battleshipModal()' src="../../assets/images/battleship.jpg" alt="">
+                    <img (click)='calculatorModal()' src="../../assets/images/calculator.png" alt="">
+                    <img (click)='jokesModal()' src="../../assets/images/dad_jokes.png" alt="">
+                    <img (click)='mazeModal()' src="../../assets/images/maze.png" alt="">
+                </div>
+                <div>
+                    <img (click)='snakeModal()' src="../../assets/images/snakeGame.png" alt="">
+                    <img (click)='plainWeatherModal()' src="../../assets/images/weather_app.png" alt="">
+                    <img (click)='messageModal()' src="../../assets/images/encryptMessage.png" alt="">
+                    <img (click)='stopwatchModal()' src="../../assets/images/stopwatch.png" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--!battleship modal-->
+    <div
+    (click)="battleshipModal()"
+    *ngIf="battleshipModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="battleshipModal()" class="close icon"></i>
+      <div class="header">BattleShip Game</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/battleship.jpg"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://battleship-project-ca4be.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/battleship" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!calculator modal-->
+  <div
+    (click)="calculatorModal()"
+    *ngIf="calculatorModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="calculatorModal()" class="close icon"></i>
+      <div class="header">Calculator Application</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/calculator.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://calculator-project-173c1.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/Calculator" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!dad jokes modal-->
+  <div
+    (click)="jokesModal()"
+    *ngIf="jokesModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="jokesModal()" class="close icon"></i>
+      <div class="header">Dad Jokes API</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/dad_jokes.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://dad-jokes-574ea.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/dadJokes" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!maze game modal-->
+  <div
+    (click)="mazeModal()"
+    *ngIf="mazeModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="mazeModal()" class="close icon"></i>
+      <div class="header">Maze Game</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/maze.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://romantic-franklin-97abc4.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/maze" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!snake game modal-->
+  <div
+    (click)="snakeModal()"
+    *ngIf="snakeModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="snakeModal()" class="close icon"></i>
+      <div class="header">Snake Game</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/snakeGame.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://snakegame-cfc0c.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/SnakeGame" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!plain javscript weather modal-->
+  <div
+    (click)="plainWeatherModal()"
+    *ngIf="plainWeatherModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="plainWeatherModal()" class="close icon"></i>
+      <div class="header">Weather API</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/weather_app.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://weather-app-project-3dd5d.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/weatherApp" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!encrypted message modal-->
+  <div
+    (click)="messageModal()"
+    *ngIf="messageModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="messageModal()" class="close icon"></i>
+      <div class="header">Encrypt Your Message</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/encryptMessage.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://nervous-sammet-1b1f3f.netlify.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/encryptMessage" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!movie fight modal-->
+  <div
+    (click)="movieModal()"
+    *ngIf="movieModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="movieModal()" class="close icon"></i>
+      <div class="header">Compare Your Favorite Movies</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/movieFight.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using Node.JS</h1>
+            <a href="https://walters-moviefight-application.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/movieFight" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!stopwatch modal-->
+  <div
+    (click)="stopwatchModal()"
+    *ngIf="stopwatchModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="stopwatchModal()" class="close icon"></i>
+      <div class="header">StopWatch Application</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/stopwatch.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using vanilla javascript</h1>
+            <a href="https://stopwatch-timer-cde79.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/StopWatch-Timer" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!notes modal-->
+  <div
+    (click)="notesModal()"
+    *ngIf="notesModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="notesModal()" class="close icon"></i>
+      <div class="header">Task and Note Taking Application</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/noteapp.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using Node.JS and MongoDB</h1>
+            <a href="https://walters-task-manager.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/taskManager" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!chat modal-->
+  <div
+    (click)="chatModal()"
+    *ngIf="chatModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="chatModal()" class="close icon"></i>
+      <div class="header">RealTime Chat Application</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/chatapp.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using Node.JS and Socket.IO</h1>
+            <a href="https://walters-chat-application.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/chat_application" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!Ecom Modal-->
+  <div
+    (click)="ecomModal()"
+    *ngIf="ecomModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="ecomModal()" class="close icon"></i>
+      <div class="header">Ecommerce Website</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/ecommapp.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using Node.JS</h1>
+            <a href="https://walters-ecommerce-application.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/e-commerce" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!nodeJS Weather Modal-->
+  <div
+    (click)="nodeJSWeatherModal()"
+    *ngIf="nodeJSWeatherModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="nodeJSWeatherModal()" class="close icon"></i>
+      <div class="header">Weather Application</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/nodejsWeatherApp.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using Node.JS</h1>
+            <a href="https://walters-weather-application.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/nodejsWeather" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!password modal-->
+  <div
+    (click)="passwordModal()"
+    *ngIf="passwordModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="passwordModal()" class="close icon"></i>
+      <div class="header">Generate A Secure Password</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/password.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using an Angular front end</h1>
+            <a href="https://angularpasswordgenerator.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/passwordGenerator" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!math game modal-->
+  <div
+    (click)="mathModal()"
+    *ngIf="mathModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="mathModal()" class="close icon"></i>
+      <div class="header">Play A Fast Paced Math Game</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/mathgame.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using an Angular front end</h1>
+            <a href="https://angularecommsite.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/mathGame" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!covid testing modal-->
+  <div
+    (click)="covidModal()"
+    *ngIf="covidModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="covidModal()" class="close icon"></i>
+      <div class="header">Find Covid Testing Locations</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/covid.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using an Angular front end</h1>
+            <a href="https://covidtesting-c7384.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/covidTests" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!email modal-->
+  <div
+    (click)="emailModal()"
+    *ngIf="emailModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="emailModal()" class="close icon"></i>
+      <div class="header">Send And Receive Your Emails</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/email.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using an Angular front end</h1>
+            <a href="https://emailapplication-a2ff3.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/emailApp" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--!wikipedia modal-->
+  <div
+    (click)="wikiModal()"
+    *ngIf="wikiModalOpen"
+    class="ui dimmer visible active"
+    >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="wikiModal()" class="close icon"></i>
+      <div class="header">Search For Any Wikipedia Document</div>
+      <div class="content">
+        <img
+          class="modalImage"
+          src="../../assets/images/wikipediaAPI.png"
+          alt=""
+        />
+        <div>
+            <h1>Built using an Angular front end</h1>
+            <a href="https://wikipediaapi-1745f.web.app/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+            <a href="https://github.com/jtw023/WikipediaAPI" target="_blank" rel="noopener noreferrer">View Source Code on Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

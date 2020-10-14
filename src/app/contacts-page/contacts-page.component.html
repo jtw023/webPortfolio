@@ -1,0 +1,64 @@
+<section id="contact">
+  <div *ngIf="message" class="ui success message">
+    <i (click)='closeMessage()' class="close icon"></i>
+    <div class="header">
+      Your message has been submitted successfully!
+    </div>
+  </div>
+  <div *ngIf="error" class="ui error message">
+    <i (click)='closeMessage()' class="close icon"></i>
+    <div class="header">
+      Something went wrong with your message submission. Please try again.
+    </div>
+  </div>
+    <form (ngSubmit)='onSubmit()' class="ui form attached fluid segment" [formGroup]="contactForm">
+      <div class="ui success message">
+            <i (click)='closeMessage()' class="close icon"></i>
+            <div class="header">
+              Your message has been successfully sumbitted!
+            </div>
+          </div>
+          <div *ngIf="error" class="ui error message">
+            <i (click)='closeMessage()' class="close icon"></i>
+            <div class="header">
+              Something went wrong with your message submission. Please try again.
+            </div>
+          </div>
+        <div class="three fields">
+            <div class="field">
+                <label>Name:</label>
+                <input type="text" placeholder="Full Name" formControlName="name">
+            </div>
+            <div class="ui compact negative message" *ngIf="contactForm.get('name').errors && contactForm.get('name').dirty">Name is required.</div>
+            <div class="field">
+                <label>Email Address:</label>
+                <input type="email" placeholder="example@gmail.com" formControlName="email">
+            </div>
+            <ng-container *ngIf="contactForm.get('email').errors">
+            <div class="ui compact negative message" *ngIf="contactForm.get('email').errors.required && contactForm.get('email').dirty">Email is required.</div>
+            </ng-container>
+            <ng-container *ngIf="contactForm.get('email').errors">
+            <div class="ui compact negative message" *ngIf="contactForm.get('email').errors.email && contactForm.get('email').dirty">Must be a valid email address.</div>
+            </ng-container>
+            <div class="field">
+                <label>Subject:</label>
+                <input type="text" placeholder="Job Opportunity" formControlName="subject">
+            </div>
+            <div class="ui compact negative message" *ngIf="contactForm.get('subject').errors && contactForm.get('subject').dirty">Subject is required.</div>
+        </div>
+        <div class="field">
+            <label>Body:</label>
+            <textarea formControlName="body" cols="30" rows="10"></textarea>
+        </div>
+        <div class="ui compact negative message" *ngIf="contactForm.get('body').errors && contactForm.get('body').dirty">Body is required.</div>
+        <button [disabled]="contactForm.get('body').pristine" type="Submit" class="ui blue submit button">Submit</button>
+    </form>
+    <footer>
+      This website was built using Angular, Cloud Firestore, and Firebase.
+      <div>
+        <a href="https://github.com/jtw023/webPortfolio" target="_blank" rel="noopener noreferrer">
+        <img src="../../assets/images/githubicon.jpg" alt="">
+        Github Page</a>
+      </div>
+    </footer>
+</section>

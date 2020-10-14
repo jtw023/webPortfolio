@@ -1,0 +1,46 @@
+section {
+  height: 94%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  footer {
+    position: absolute;
+    bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 45px;
+    }
+  }
+}
+
+.ui.success.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ui.error.message {
+  margin: 0 auto;
+}
+
+.ui.form.attached.fluid.segment {
+  width: 75vw;
+  margin: 0 auto;
+  max-width: 750px;
+  margin-bottom: 100px;
+
+  textarea {
+    resize: none;
+  }
+}

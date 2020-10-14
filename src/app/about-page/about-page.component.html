@@ -1,0 +1,94 @@
+<section id="about">
+  <video controls>
+    <source src="../../assets/videos/aboutme.m4v" type="video/mp4" />
+    Your browser does not support this video. Please use chrome or firefox.
+  </video>
+  <div class="ui grid">
+    <div (click)="angularModal()" class="four wide column">
+      <img
+        src="../../assets/certificates/AngularCertificateOfCompletion.jpg"
+        alt=""
+      />
+    </div>
+    <div (click)="firestoreModal()" class="four wide column">
+      <img
+        src="../../assets/certificates/FirestoreCertificateOfCompletion.jpg"
+        alt=""
+      />
+    </div>
+    <div (click)="javascriptModal()" class="four wide column">
+      <img
+        src="../../assets/certificates/JavaScriptBootcampCertificateOfCompletion.jpg"
+        alt=""
+      />
+    </div>
+    <div (click)="nodeJSModal()" class="four wide column">
+      <img src="../../assets/certificates/node.jsCompletion.jpg" alt="" />
+    </div>
+  </div>
+
+  <div
+    (click)="angularModal()"
+    *ngIf="angularModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="angularModal()" class="close icon"></i>
+      <div class="header">Angular Certificate</div>
+      <div class="content">
+        <img
+          src="../../assets/certificates/AngularCertificateOfCompletion.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="firestoreModal()"
+    *ngIf="firestoreModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="firestoreModal()" class="close icon"></i>
+      <div class="header">Firebase Certificate</div>
+      <div class="content">
+        <img
+          src="../../assets/certificates/FirestoreCertificateOfCompletion.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="javascriptModal()"
+    *ngIf="javascriptModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="javascriptModal()" class="close icon"></i>
+      <div class="header">JavaScript Certificate</div>
+      <div class="content">
+        <img
+          src="../../assets/certificates/JavaScriptBootcampCertificateOfCompletion.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="nodeJSModal()"
+    *ngIf="nodeJSModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="nodeJSModal()" class="close icon"></i>
+      <div class="header">Node.JS Certificate</div>
+      <div class="content">
+        <img src="../../assets/certificates/node.jsCompletion.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+section {
+  height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    .content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          margin-bottom: 8vh;
+        }
+        a {
+          margin-bottom: 4vh;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    img {
+      width: 124.86px;
+      padding: 8px;
+    }
+    .modalImage {
+      width: 300px;
+    }
+  }
+}
+
+.ui.segment {
+  height: 100%;
+  background-color: grey;
+  img {
+    cursor: zoom-in;
+  }
+}
