@@ -1,8 +1,56 @@
+<!--TODO: Use machine learning/computer vision/algorithms & data structures certificates-->
+
 <section id="about">
   <video controls>
     <source src="../../assets/videos/aboutme.m4v" type="video/mp4" />
     Your browser does not support this video. Please use chrome or firefox.
   </video>
+
+  <div class="ui grid">
+    <div (click)="pythonProgrammingModal()" class="one wide column">
+      <img
+        src="../../assets/certificates/Python_Programming.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="ui grid">
+    <div (click)="cProgrammingModal()" class="two wide column">
+      <img
+        src="../../assets/certificates/C_Programming.jpg"
+        alt=""
+      />
+    </div>
+    <div (click)="cppProgrammingModal()" class="two wide column">
+      <img
+        src="../../assets/certificates/C++_Programming.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="ui grid">
+    <div (click)="algorithmsModal()" class="three wide column">
+      <img
+        src="../../assets/certificates/Algorithms_and_DataStructures.jpeg"
+        alt=""
+      />
+    </div>
+    <div (click)="machineLearningModal()" class="three wide column">
+      <img
+        src="../../assets/certificates/Python_Machine_Learning.jpg"
+        alt=""
+      />
+    </div>
+    <div (click)="deepLearningModal()" class="three wide column">
+      <img
+        src="../../assets/certificates/Python_Deep_Learning.jpeg"
+        alt=""
+      />
+    </div>
+  </div>
+
   <div class="ui grid">
     <div (click)="angularModal()" class="four wide column">
       <img
@@ -38,6 +86,57 @@
       <div class="content">
         <img
           src="../../assets/certificates/AngularCertificateOfCompletion.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="algorithmsModal()"
+    *ngIf="algorithmsModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="algorithmsModal()" class="close icon"></i>
+      <div class="header">Algorithms and Data Structures Certificate</div>
+      <div class="content">
+        <img
+          src="../../assets/certificates/Algorithms_and_DataStructures.jpeg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="machineLearningModal()"
+    *ngIf="machineLearningModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="machineLearningModal()" class="close icon"></i>
+      <div class="header">Python Machine Learning Certificate</div>
+      <div class="content">
+        <img
+          src="../../assets/certificates/Python_Machine_Learning.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="deepLearningModal()"
+    *ngIf="deepLearningModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="deepLearningModal()" class="close icon"></i>
+      <div class="header">Python Deep Learning Certificate</div>
+      <div class="content">
+        <img
+          src="../../assets/certificates/Python_Deep_Learning.jpeg"
           alt=""
         />
       </div>
@@ -88,6 +187,48 @@
       <div class="header">Node.JS Certificate</div>
       <div class="content">
         <img src="../../assets/certificates/node.jsCompletion.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="cProgrammingModal()"
+    *ngIf="cProgrammingModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="cProgrammingModal()" class="close icon"></i>
+      <div class="header">C Programming Certificate</div>
+      <div class="content">
+        <img src="../../assets/certificates/C_Programming.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="cppProgrammingModal()"
+    *ngIf="cppProgrammingModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="cppProgrammingModal()" class="close icon"></i>
+      <div class="header">C++ Programming Certificate</div>
+      <div class="content">
+        <img src="../../assets/certificates/C++_Programming.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div
+    (click)="pythonProgrammingModal()"
+    *ngIf="pythonProgrammingModalOpen"
+    class="ui dimmer visible active"
+  >
+    <div (click)="$event.stopPropagation()" class="ui modal visible active">
+      <i (click)="pythonProgrammingModal()" class="close icon"></i>
+      <div class="header">Python Programming Certificate</div>
+      <div class="content">
+        <img src="../../assets/certificates/Python_Programming.jpg" alt="" />
       </div>
     </div>
   </div>

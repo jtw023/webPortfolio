@@ -5,8 +5,10 @@ section {
   height: 100%;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25%;
 
   video {
+    margin-top: 25vh;
     height: 335px;
     width: 65vw;
     max-width: 729.94px;
@@ -15,6 +17,19 @@ section {
   .ui.grid {
     margin-top: 5vh;
     height: 25%;
+
+    .three.wide.column {
+      width: 33% !important;
+    }
+
+    .two.wide.column {
+      width: 50% !important;
+    }
+
+    .one.wide.column {
+      width: 100% !important;
+    }
+
     img {
       width: 20vw;
       max-width: 197px;
@@ -22,8 +37,15 @@ section {
   }
 }
 
-.four.wide.column {
+.four.wide.column,
+.three.wide.column,
+.two.wide.column,
+.one.wide.column {
   cursor: zoom-in;
+}
+
+.ui.active.dimmer {
+  height: 150%;
 }
 
 .ui.modal.visible.active {
